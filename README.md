@@ -38,8 +38,8 @@ openssl base64 -A -in key.keystore -out key.keystore.base64.txt
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ${{steps.sign_apk.outputs.signedReleaseFile}}
-          asset_name: AmongZap ${{ steps.var.outputs.tag }}.apk
-          #           ^^^^^^^^
+          asset_name: Hello World ${{ steps.var.outputs.tag }}.apk
+          #           ^^^^^^^^^^^
           asset_content_type: application/zip
 
       - name: Upload AAB
@@ -49,8 +49,8 @@ openssl base64 -A -in key.keystore -out key.keystore.base64.txt
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ${{steps.sign_aab.outputs.signedReleaseFile}}
-          asset_name: AmongZap ${{ steps.var.outputs.tag }}.aab
-          #           ^^^^^^^^
+          asset_name: Hello World ${{ steps.var.outputs.tag }}.aab
+          #           ^^^^^^^^^^^
           asset_content_type: application/zip
 ```
 
